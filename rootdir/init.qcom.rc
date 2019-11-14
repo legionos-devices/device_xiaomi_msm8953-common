@@ -651,3 +651,6 @@ on property:dev.bootcomplete=1
  # USB Fastcharge
     chown system system /sys/kernel/fast_charge/force_fast_charge
     chmod 0660 /sys/kernel/fast_charge/force_fast_charge
+
+on property:apexd.status=ready
+    symlink /system/lib64/libashmemd_client.so /system/apex/com.android.media.swcodec/lib64/libashmemd_client.so
